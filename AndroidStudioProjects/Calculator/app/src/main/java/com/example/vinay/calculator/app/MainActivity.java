@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
     String value="";
+    String disp="";
     float temp,temp2;
     String symbol;
     private void displayans(float answer)
@@ -32,87 +33,105 @@ public class MainActivity extends AppCompatActivity
     public void one(View view)
     {
         value+="1";
-        display(value);
+        disp+="1";
+        display(disp);
     }
     public void two(View view)
     {
         value+="2";
-        display(value);
+        disp+="2";
+        display(disp);
     }
     public void three(View view)
     {
         value+="3";
-        display(value);
+        disp+="3";
+        display(disp);
     }
     public void four(View view)
     {
         value+="4";
-        display(value);
+        disp+="4";
+        display(disp);
     }
     public void five(View view)
     {
         value+="5";
-        display(value);
+        disp+="5";
+        display(disp);
     }
     public void six(View view)
     {
         value+="6";
-        display(value);
+        disp+="6";
+        display(disp);
     }
     public void seven(View view)
     {
         value+="7";
-        display(value);
+        disp+="7";
+        display(disp);
     }
     public void eight(View view)
     {
         value+="8";
-        display(value);
+        disp+="8";
+        display(disp);
     }
     public void nine(View view)
     {
         value+="9";
-        display(value);
+        disp+="9";
+        display(disp);
     }
     public void zero(View view)
     {
         value+="0";
-        display(value);
+        disp+="0";
+        display(disp);
     }
     public void div(View view)
     {
         symbol="/";
         temp=Float.parseFloat(value);
+        disp+="/";
+        display(disp);
         value="";
-
     }
     public void mul(View view)
     {
         symbol="*";
         temp=Float.parseFloat(value);
+        disp+="*";
+        display(disp);
         value="";
     }
     public void minus(View view)
     {
         symbol="-";
         temp=Float.parseFloat(value);
+        disp+="-";
+        display(disp);
         value="";
     }
     public void plus(View view)
     {
         symbol="+";
         temp=Float.parseFloat(value);
+        disp+="+";
+        display(disp);
         value="";
     }
     public void dot(View view)
     {
         value+=".";
-        display(value);
+        disp+=".";
+        display(disp);
     }
     public void del(View view)
     {
-        value=value.replace(value.substring(value.length()-1), "");
-        display(value);
+        disp=disp.replace(disp.substring(disp.length()-1), "");
+        display(disp);
     }
     public void equal(View view)
     {
@@ -124,6 +143,7 @@ public class MainActivity extends AppCompatActivity
                 displayans(temp);
                 symbol="";
                 value="";
+                disp="";
                 break;
 
             case "*":
@@ -132,6 +152,7 @@ public class MainActivity extends AppCompatActivity
                 displayans(temp);
                 symbol="";
                 value="";
+                disp="";
                 break;
 
             case "-":
@@ -140,6 +161,7 @@ public class MainActivity extends AppCompatActivity
                 displayans(temp);
                 symbol="";
                 value="";
+                disp="";
                 break;
 
             case "+":
@@ -148,6 +170,7 @@ public class MainActivity extends AppCompatActivity
                 displayans(temp);
                 symbol="";
                 value="";
+                disp="";
                 break;
         }
 
